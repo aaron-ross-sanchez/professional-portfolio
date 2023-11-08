@@ -1,0 +1,138 @@
+<!--DOCTYPE defines HTML for the browser -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Sets the width of the viewport to the width of the device's screen, at default size-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Aaron Sanchez's Portfolio.">
+    <meta name="author" content="Aaron Sanchez">
+    <meta name="keywords" content="portfolio, website, front-end, back-end">
+    <!--CSS for the index.html file-->
+    <link rel="stylesheet" href="./assets/reset.css"/>
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <title>Aaron Sanchez</title>
+</head>
+
+<body>
+    <!--This header is for the nav bar. The link in the nav bar links to the different sections on the index page, except for Resume-->
+    <header class="header">
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-about"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-portfolio"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-contact"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-resume"><a href="#" class="nav-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--This is for the tri-color angular design under the nav bar-->
+    <article class="header-design">
+        <div class="full-width-rectangle"></div>
+        <div class="accent-one-header"></div>
+        <div class="accent-two-header"></div>
+    </article>
+
+    <main class="main-content">
+        
+        <section id="about" class="about">
+            <img src="./assets/images/profile-picture.jpg" alt="Picture of Aaron Sanchez" class="profile-picture">
+            <!--This is the html code for the vertical line, created with CSS border properties-->
+            <div class="vertical-line"></div>
+            <div class="about-right">
+                <h2 class="about-me">About Me</h2>
+                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie leo at sapien efficitur, bibendum imperdiet purus vehicula. Morbi sollicitudin diam eget semper tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur convallis risus, a cursus leo interdum ac. Curabitur ornare porttitor tellus faucibus feugiat. Nam ultrices elit eget ex lobortis mollis. Fusce eget commodo purus. Nulla ullamcorper mi a mi varius, eget rhoncus sem sagittis. Nunc pellentesque et leo eget posuere. Fusce non semper nisl. Quisque dignissim, nisl vitae porta iaculis, magna ipsum pellentesque turpis, eget porta leo elit ut dui. Nunc malesuada ut felis at imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus diam mi, ultricies nec malesuada eget, cursus eget tellus.<br><br>Suspendisse potenti. Ut ornare quis lectus vel suscipit. Duis et tellus at nunc dapibus venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lectus metus, quis lacinia ligula egestas ut. Duis mauris tortor, ornare eu elementum non, iaculis eu mauris. Fusce arcu nisi, molestie pharetra tincidunt sit amet, feugiat vitae velit. Integer porttitor tincidunt purus, sed interdum lectus elementum eu. Quisque ornare viverra lorem, non dapibus orci lacinia quis. Proin ultrices venenatis mauris, vitae dignissim lorem venenatis sit amet. Duis laoreet, dui nec facilisis consequat, sem nisi mattis lectus, ac finibus risus ante ut purus.</p>
+            </div>
+        </section>
+
+        <!--This is for the tri-color angular design between the about-me and portfolio section-->
+        <article class="middle-design">
+            <div class="full-width-rectangle-middle"></div>
+            <div class="accent-one-middle"></div>
+            <div class="accent-two-middle"></div>
+            <div class="accent-three-middle"></div>
+            <div class="accent-four-middle"></div>
+            <div class="accent-five-middle"></div>
+        </article>
+
+        <section id="portfolio" class="portfolio">
+            <h2 class="my-portfolio">Portfolio</h2>
+            <div class="vertical-line"></div>
+            <div class="portfolio-right">
+
+                <div class="primary-image-container">
+                    <img src="./assets/images/Project 1.jpg" alt="Project 1" class="primary-project">
+                    <!--This anchor tag links the html page of the first project to the class project-link.-->
+                    <a href="./project-1.html" class="project-link">
+                        <div class="primary-image-hover">
+                            <div class="primary-image-text">Project 1</div>
+                            <div class="primary-image-subtext"><strong class="bold">Languages:</strong> <br> <br><strong class="bold">Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus in hac habitasse platea dictumst quisque sagittis purus sit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="secondary-image-container">
+                    <img src="./assets/images/Project 2.jpg" alt="Project 2" class="secondary-project">
+                    <a href="./project-2.html" class="project-link">
+                        <div class="secondary-image-hover">
+                            <div class="secondary-image-text">Project 2</div>
+                            <div class="secondary-image-subtext"><strong class="bold">Languages:</strong></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="third-image-container">
+                    <img src="./assets/images/Project 3.jpg" alt="Project 3" class="third-project">
+                    <a href="./project-3.html" class="project-link">
+                        <div class="third-image-hover">
+                            <div class="third-image-text">Project 3</div>
+                            <div class="third-image-subtext"><strong class="bold">Languages:</strong></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fourth-image-container">
+                    <img src="./assets/images/Project 4.jpg" alt="Project 4" class="fourth-project">
+                    <a href="./project-4.html" class="project-link">
+                        <div class="fourth-image-hover">
+                            <div class="fourth-image-text">Project 4</div>
+                            <div class="fourth-image-subtext"><strong class="bold">Languages:</strong></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fifth-image-container">
+                    <img src="./assets/images/Project 5.jpg" alt="Project 5" class="fifth-project">
+                    <a href="./project-5.html" class="project-link">
+                        <div class="fifth-image-hover">
+                            <div class="fifth-image-text">Project 5</div>
+                            <div class="fifth-image-subtext"><strong class="bold">Languages:</strong></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--This is for the tri-color angular footer design-->
+    <article class="footer-design">
+        <div class="full-width-rectangle-footer"></div>
+        <div class="accent-one-footer"></div>
+        <div class="accent-two-footer"></div>
+    </article>
+
+    <footer>
+        <div id="contact" class="contact">
+            <ul class="footer-contact">
+                <li><strong>Contact Me:</strong></li>
+                <li class="email">aaron.ross.sanchez@gmail.com</li>
+                <li class="github"><a href="https://github.com/aaron-ross-sanchez/" class="github-link">GitHub</a></li>
+                <li class="linkedin"><a href="" class="linkedin-link">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
