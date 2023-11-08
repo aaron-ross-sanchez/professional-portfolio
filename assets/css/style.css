@@ -1,0 +1,626 @@
+/*CSS Variable*/
+:root {
+    --back-color: #f8ede3;
+    --dark-accent: #85586f;
+    --accent-one: #dfd3c3;
+    --accent-two: #D0B8A8;
+}
+
+/*Universal Selector*/
+/*When nav linkes are clicked, it won't jump to the page*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*This is where the Font CSS code is*/
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--back-color);
+    font-family: 'Crimson Text', serif;
+}
+
+/*This is the color of the nav bar*/
+header {
+    background-color: var(--back-color);
+}
+
+/*Navigation Bar*/
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+nav li a:hover {
+    background-color: var(--dark-accent);
+    color:white;
+}
+
+
+/*THIS IS THE CODE FOR THE HEADER DESIGN*/
+.header-design {
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+
+/*This keeps the background dimensions consistent*/
+.full-width-rectangle {
+    position: absolute;
+}
+
+/*Initially sets the height of the overall header design*/
+.full-width-rectangle {
+    width: 100%;
+    height: 175px;
+    background-color: var(--dark-accent);
+}
+
+/*Used clip-path to access the specific points*/
+
+.accent-one-header {
+    width: 100%;
+    height: 97%;
+    background-color: var(--accent-one);
+    position: absolute; 
+    clip-path: polygon(0% 60%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.accent-two-header {
+    width: 100%;
+    height: 97%;
+    background-color: var(--accent-two);
+    position: absolute; 
+    clip-path: polygon(30% 48%, 100% 20%, 100% 80%, 30% 48%);
+}
+
+/*THIS IS FOR THE VERTICAL LINE*/
+/*.vertical-line is for the over all container, while the ::before pseudo-element adds that code before the actual element.*/
+.vertical-line {
+    position: relative;
+    margin: 0px 20px;
+}
+  
+.vertical-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    border-radius: 25px;
+    background-color: var(--dark-accent)
+}
+
+/*THIS IS THE ABOUT ME SECTION*/
+/*Sets the display as a flex box*/
+.about {
+    display: flex;
+    margin: 60px 30px;
+}
+
+/*This will be reused in the paragraph section*/
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/*THIS IS FOR THE PROFILE PICTURE*/
+.profile-picture {
+    max-width: 30%;
+    height: auto;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 5px var(--dark-accent);
+}
+
+/*THIS IS THE CODE FOR THE MIDDLE DESIGN*/
+/*This code is very similar to the header design, just with different points in the clip-path*/
+.middle-design {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.full-width-rectangle-middle {
+    position: absolute;
+}
+
+.full-width-rectangle-middle {
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark-accent);
+}
+
+.accent-one-middle {
+    width: 100%;
+    height: 90%;
+    background-color: var(--accent-one);
+    position: absolute; 
+    clip-path: polygon(0% 10%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.accent-two-middle {
+    width: 100%;
+    height: 90%;
+    background-color: var(--accent-two);
+    position: absolute; 
+    clip-path: polygon(0% 10%, 100% 10%, 100% 40%, 0% 80%);
+}
+
+/* .accent-three-middle {
+    width: 100%;
+    height: 90%;
+    background-color: var(--back-color);
+    position: absolute; 
+    clip-path: polygon(0% 10%, 25% 10%, 100% 75%, 100% 100%, 65% 100%, 0% 45%);
+} */
+
+/* .accent-four-middle {
+    width: 100%;
+    height: 90%;
+    background-color: var(--dark-accent);
+    position: absolute; 
+    clip-path: polygon(0% 54%, 100% 54%, 100% 56%, 0% 56%);
+} */
+
+/* .accent-five-middle {
+    width: 100%;
+    height: 90%;
+    background-color: var(--back-color);
+    position: absolute; 
+    clip-path: polygon(80% 48%, 100% 40%, 100% 100%, 100% 100%);
+} */
+
+/*THIS IS THE PORTFOLIO SECTION*/
+.portfolio {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 60px 30px;
+}
+
+.my-portfolio {
+    right: 40px;
+}
+
+/*This is the container for the portfolio projects*/
+.portfolio-right {
+    width: 670px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Changes text color of image text to black */
+.project-link {
+    color:black;
+}
+
+/*Code for the first project, whose container is twice as large as the others*/
+.primary-image-container {
+    width: 630px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 15px 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 5px var(--dark-accent);
+}
+
+/*This is the image for .primary-image-container and is set to cover, so it will not be stretched, but zoomed in if needed*/
+.primary-project {
+    width: 630px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/*This is the code for when the mouse moves over the image. It has a transition, cursor change, and a flex box for the text held inside*/
+.primary-image-hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75); 
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+/*End value of hover*/
+.primary-image-hover:hover {
+    opacity: 1;
+}
+
+/*TITLE - Text within the image when it is hovered over. Contains a transition*/
+.primary-image-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    margin: 10px;
+    font-size: 60px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s ease;
+}
+
+/*Description - Text within the image when it is hovered over. Contains a transition to match the other text*/
+.primary-image-subtext {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+    transition: opacity .3s ease;
+}
+
+/*Gets the background off of the text in the html strong tag*/
+.bold {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/*Code for the second project, whose container is twice as small as the primary*/
+.secondary-image-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 5px var(--dark-accent);
+}
+
+/*This is the image for .secondary-image-container and is set to cover, so it will not be stretched, but zoomed in if needed*/
+.secondary-project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+/*This is the code for when the mouse moves over the image. It has a transition, cursor change, and a flex box for the text held inside*/
+.secondary-image-hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75); 
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+/*End value of hover*/
+.secondary-image-hover:hover {
+    opacity: 1;
+}
+
+/*TITLE - Text within the image when it is hovered over. Contains a transition*/
+.secondary-image-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    margin: 10px;
+    font-size: 40px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s ease;
+}
+
+/*Description - Text within the image when it is hovered over. Contains a transition to match the other text*/
+.secondary-image-subtext {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+    transition: opacity .3s ease;
+}
+
+/*.third-image code in nearly identical to secondary-image code*/
+.third-image-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 5px var(--dark-accent);
+}
+
+.third-project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity .3s ease; 
+}
+
+.third-image-hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75); 
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.third-image-hover:hover {
+    opacity: 1;
+}
+
+.third-image-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    margin: 10px;
+    font-size: 40px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s ease;
+}
+
+.third-image-subtext {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+    transition: opacity .3s ease;
+}
+
+/*.fourth-image code in nearly identical to secondary-image code*/
+.fourth-image-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 5px var(--dark-accent);
+}
+
+.fourth-project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.fourth-image-hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75); 
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.fourth-image-hover:hover {
+    opacity: 1;
+}
+
+.fourth-image-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    margin: 10px;
+    font-size: 40px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s ease;
+}
+
+.fourth-image-subtext {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+    transition: opacity .3s ease;
+}
+
+/*.fifth-image code in nearly identical to secondary-image code*/
+
+.fifth-image-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 5px var(--dark-accent);
+}
+
+.fifth-project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.fifth-image-hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75); 
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.fifth-image-hover:hover {
+    opacity: 1;
+}
+
+.fifth-image-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    margin: 10px;
+    font-size: 40px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s ease;
+}
+
+.fifth-image-subtext {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: var(--dark-accent-); 
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+    transition: opacity .3s ease;
+}
+
+/*THIS IS THE CODE FOR THE FOOTER DESIGN*/
+/*This code is very similar to the header design, just with different points in the clip-path*/
+.footer-design {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.full-width-rectangle-footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: var(--dark-accent);
+}
+
+.accent-one-footer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-one);
+    position: absolute; 
+    clip-path: polygon(0% 5%, 100% 5%, 100% 25%, 0% 75%);
+}
+
+.accent-two-footer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-two);
+    position: absolute; 
+    clip-path: polygon(0% 5%, 10% 5%, 75% 37.5%, 0% 75%);
+}
+
+/*THIS IS THE FOOTER CODE*/
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.footer-contact li {
+    display: inline;
+    color: black;
+    text-align: center;
+    margin: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.contact ul li a{
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+ul li a:hover {
+    background-color: var(--dark-accent);
+    color:white;
+}
