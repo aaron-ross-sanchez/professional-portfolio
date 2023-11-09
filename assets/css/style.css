@@ -24,6 +24,13 @@ img {
     font-family: 'Crimson Text', serif;
 }
 
+/*This debugs the reset .main-content code*/
+.main-content {
+    display: inline;
+    margin: 0px 0px;
+    max-width: auto;
+}
+
 /*This is the color of the nav bar*/
 header {
     background-color: var(--back-color);

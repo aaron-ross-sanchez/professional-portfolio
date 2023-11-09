@@ -25,15 +25,15 @@ img {
     max-width: 800px;
 }
 
-.main-content .about {
+/* .main-content .about {
     margin: 10px 0 30px 0;
-}
+} */
 
-.portfolio-right {
+/* .portfolio-right {
     display: flex;
     flex-direction: column;
     margin: 0px 10px;
-}
+} */
 
 .portfolio-right .project-link {
     margin: 0px 10px;
