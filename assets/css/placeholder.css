@@ -1,0 +1,93 @@
+/*CSS Variable*/
+:root {
+    --back-color: #f8ede3;
+    --dark-accent: #85586f;
+    --accent-one: #dfd3c3;
+    --accent-two: #D0B8A8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--back-color);
+    font-family: 'Crimson Text', serif;
+}
+
+/*Navigation Bar*/
+.header {
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    z-index: 2;
+}
+
+nav ul li a{
+    display: block;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+nav li a:hover {
+    background-color: var(--dark-accent);
+    color:white;
+}
+
+
+/*THIS IS THE CODE FOR THE HEADER DESIGN*/
+article {
+    position: relative;
+    margin-top: -42px;
+    z-index: 1;
+}
+
+.header-design {
+    position: relative;
+    width: 100%;
+    height: 125px;
+}
+
+/*This keeps the background dimensions consistent*/
+.full-width-rectangle {
+    position: absolute;
+}
+
+/*Initially sets the height of the overall header design*/
+.full-width-rectangle {
+    width: 100%;
+    height: 125px;
+    background-color: var(--dark-accent);
+}
+
+/*Used clip-path to access the specific points*/
+
+.accent-one-header {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-one);
+    position: absolute; 
+    clip-path: polygon(0% 60%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.accent-two-header {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-two);
+    position: absolute; 
+    clip-path: polygon(30% 48%, 100% 20%, 100% 80%, 30% 48%);
+}
