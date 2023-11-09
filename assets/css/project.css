@@ -1,0 +1,248 @@
+/*CSS Variable*/
+:root {
+    --back-color: #f8ede3;
+    --dark-accent: #85586f;
+    --accent-one: #dfd3c3;
+    --accent-two: #D0B8A8;
+}
+
+/*Font CSS code*/
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--back-color);
+    font-family: 'Crimson Text', serif;
+}
+
+/*Navigation Bar*/
+.header {
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    z-index: 2;
+}
+
+nav ul li a{
+    display: block;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px 20px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+
+/*THIS IS THE CODE FOR THE HEADER DESIGN*/
+article {
+    position: relative;
+    margin-top: -42px;
+    z-index: 1;
+}
+
+.header-design {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+/*This keeps the background dimensions consistent*/
+.full-width-rectangle {
+    position: absolute;
+}
+
+/*Initially sets the height of the overall header design*/
+.full-width-rectangle {
+    width: 100%;
+    height: 120px;
+    background-color: var(--dark-accent);
+}
+
+/*Used clip-path to access the specific points*/
+.accent-one-header {
+    width: 100%;
+    height: 97%;
+    background-color: var(--accent-one);
+    position: absolute; 
+    clip-path: polygon(0% 50%, 50% 50%, 90% 90%, 0% 90%);
+    z-index: 1;
+}
+
+.accent-two-header {
+    width: 100%;
+    height: 97%;
+    background-color: var(--accent-two);
+    position: absolute; 
+    clip-path: polygon(0% 50%, 90% 50%, 20% 90%, 0% 90%);
+    z-index: 2;
+}
+
+.accent-three-header {
+    width: 100%;
+    height: 97%;
+    background-color: var(--back-color);
+    position: absolute; 
+    clip-path: polygon(0% 50%, 100% 50%, 100% 90%, 0% 90%);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 240px;
+    /* width: 800px; */
+}
+
+h2{
+    font-size: 46px;
+}
+
+.name {
+    margin: 0px 0px;
+}
+
+.horizontal-line {
+    border-bottom: 8px solid var(--dark-accent);
+    border-radius: 25px;
+    margin: 20px 0px;
+}
+
+.description {
+    font-size: 20px;
+    margin: 20px px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.repo {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.deployment {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.languages {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.project-breakdown {
+    margin: 20px 0px;
+}
+
+.information {
+    font-size: 20px;
+    margin: 20px px;
+}
+
+/*Media Queries below*/
+
+@media screen and (max-width: 1024px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 200px;
+    }
+}
+
+@media screen and (max-width: 804px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 120px;
+    }
+
+    .accent-one-header {
+        width: 100%;
+        height: 97%;
+        background-color: var(--accent-one);
+        position: absolute; 
+        clip-path: polygon(0% 50%, 30% 50%, 60% 90%, 0% 90%);
+        z-index: 1;
+    }
+    
+    .accent-two-header {
+        width: 100%;
+        height: 97%;
+        background-color: var(--accent-two);
+        position: absolute; 
+        clip-path: polygon(0% 50%, 70% 50%, 20% 90%, 0% 90%);
+        z-index: 2;
+    }
+    
+    .accent-three-header {
+        width: 100%;
+        height: 97%;
+        background-color: var(--back-color);
+        position: absolute; 
+        clip-path: polygon(0% 50%, 100% 50%, 100% 90%, 0% 90%);
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 30px;
+    }
+
+    .accent-one-header {
+        width: 100%;
+        height: 97%;
+        background-color: var(--accent-one);
+        position: absolute; 
+        clip-path: polygon(0% 50%, 30% 50%, 50% 90%, 0% 90%);
+        z-index: 1;
+    }
+    
+    .accent-two-header {
+        width: 100%;
+        height: 97%;
+        background-color: var(--accent-two);
+        position: absolute; 
+        clip-path: polygon(0% 50%, 55% 50%, 20% 90%, 0% 90%);
+        z-index: 2;
+    }
+    
+    .accent-three-header {
+        width: 100%;
+        height: 97%;
+        background-color: var(--back-color);
+        position: absolute; 
+        clip-path: polygon(0% 50%, 100% 50%, 100% 90%, 0% 90%);
+    }
+}
