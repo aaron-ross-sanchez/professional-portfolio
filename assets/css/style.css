@@ -12,6 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    display: inline;
+}
+
 /*This is where the Font CSS code is*/
 * {
     margin: 0;
@@ -108,8 +112,18 @@ nav li a:hover {
     background-color: var(--dark-accent)
 }
 
+/*This is to redo margins from the reset*/
+/* .main-content {
+    display: inline;
+}
+
+.portfolio-right {
+    display: flex;
+} */
+
 /*THIS IS THE ABOUT ME SECTION*/
 /*Sets the display as a flex box*/
+
 .about {
     display: flex;
     align-items: center;
@@ -627,6 +641,7 @@ p {
     margin: 20px;
     padding: 10px 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .contact ul li a{
@@ -764,6 +779,11 @@ ul li a:hover {
 
 @media screen and (max-width: 375px) {
     
+    *, img, .about, .portfolio, .project-right {
+        min-width: auto;
+        min-height: auto;
+    }
+
     .portolio-right {
         width: auto;
     }
